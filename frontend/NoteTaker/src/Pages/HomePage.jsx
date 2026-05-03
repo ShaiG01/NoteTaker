@@ -4,7 +4,7 @@ import RateLimitedUI from './Components/RateLimitedUI.jsx'
 import axios from 'axios'
 import {LucideMessageCircleWarning} from 'lucide-react'
 import NoteCard from './Components/NoteCard.jsx'
-import toast from 'react-hot-toast'
+
 
 const HomePage = () => {
     const [status, setStatus] = useState('loading')
