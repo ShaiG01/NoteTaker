@@ -21,9 +21,9 @@ connectDB().then(()=>{
 //middleware
 app.use(express.json());
 
-if(process.env.PROCESS === "development"){
+if(process.env.NODE_ENV === "development"){
   app.use(cors({
-  origin: 'https://notetaker-bc1v.onrender.com', 
+  origin: 'https://notetaker-bc1v.onrender.com/api/notes', 
   methods: ['GET', 'POST', 'PUT', 'DELETE'], 
   allowedHeaders: ['Content-Type', 'Authorization'], 
   credentials: true
@@ -35,7 +35,7 @@ app.use(rateLimiter);
 
 app.use('/api/notes', router)
 
-if(process.env.PROCESS === "production"){
+if(process.env.NODE_ENV === "production"){
   app.use(express.static(path.join(__dirname, '../frontend/NoteTaker/dist')))
 
   app.get("*", (req,res)=>{
