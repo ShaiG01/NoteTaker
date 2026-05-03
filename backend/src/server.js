@@ -28,11 +28,9 @@ if(process.env.NODE_ENV === "development"){
   allowedHeaders: ['Content-Type', 'Authorization'], 
   credentials: true
 }));
-app.use(rateLimiter);
 }
 
-
-
+app.use(rateLimiter);
 app.use('/api/notes', router)
 
 if(process.env.NODE_ENV === "production"){
