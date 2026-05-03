@@ -21,7 +21,7 @@ connectDB().then(()=>{
 //middleware
 app.use(express.json());
 
-if(process.env.process === "development"){
+if(process.env.PROCESS === "development"){
   app.use(cors({
   origin: 'http://localhost:5173', 
   methods: ['GET', 'POST', 'PUT', 'DELETE'], 
