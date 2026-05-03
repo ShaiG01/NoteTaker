@@ -15,7 +15,7 @@ const HomePage = () => {
       try{
         setNotes(prevNotes => prevNotes.filter(note => note._id !== id));
 
-        const res = await axios.delete(`http://localhost:5001/api/notes/${id}`)
+        const res = await axios.delete(`https://notetaker-bc1v.onrender.com/api/notes/${id}`)
 
         if(res.status === 200){
           console.log(`${id} deleted successfully`)
@@ -41,7 +41,7 @@ const HomePage = () => {
 
     const getData = async()=>{
       setStatus
-      const data = await axios.get('http://localhost:5001/api/notes')
+      const data = await axios.get('https://notetaker-bc1v.onrender.com/api/notes')
       return data
     }
 

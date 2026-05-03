@@ -19,7 +19,7 @@ const updateNote = async (e) => {
   e.preventDefault()
   try {
       const res = await axios.put(
-        `http://localhost:5001/api/notes/${id}`,
+        `https://notetaker-bc1v.onrender.com/api/notes/${id}`,
         form
       );
 
@@ -50,7 +50,7 @@ const updateNote = async (e) => {
   useEffect(()=>{
     const fetchNoteData = async()=>{
       try{
-         const res = await axios.get(`http://localhost:5001/api/notes/${id}`)
+         const res = await axios.get(`https://notetaker-bc1v.onrender.com/api/notes/${id}`)
 
          if(res.status === 200){
           console.log('Note Data:', res.data)
