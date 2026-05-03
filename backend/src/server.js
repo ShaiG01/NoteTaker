@@ -23,7 +23,7 @@ app.use(express.json());
 
 if(process.env.NODE_ENV === "development"){
   app.use(cors({
-  origin: 'https://notetaker-bc1v.onrender.com/api/notes', 
+  origin: 'https://notetaker-1-i6xh.onrender.com', 
   methods: ['GET', 'POST', 'PUT', 'DELETE'], 
   allowedHeaders: ['Content-Type', 'Authorization'], 
   credentials: true

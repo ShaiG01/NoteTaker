@@ -21,7 +21,7 @@ const CreatePage = () => {
 
     try {
       const res = await axios.post(
-        'https://notetaker-bc1v.onrender.com/api/notes',
+        'https://notetaker-1-i6xh.onrender.com/api/notes',
         form
       );
 
